@@ -11,11 +11,12 @@ const cookieParser = require("cookie-parser");
 
 const port = process.env.PORT || 5000
 
-app.use(cors({
-    origin: 'http://localhost:5173', 
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ['Content-Type', 'Authorization']
-  }));
+// app.use(cors({
+//     origin: 'quizquest01.netlify.app', 
+//     methods: ['GET', 'POST', 'PUT', 'DELETE'],
+//     allowedHeaders: ['Content-Type', 'Authorization']
+//   }));
+app.use(cors())
     app.use(express.json()) 
     app.use(cookieParser()) 
     app.use(express.urlencoded({extended:true}))
